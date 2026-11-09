@@ -1,0 +1,396 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fharizi Ghatanalya | Network Engineer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #07111f;
+            color: white;
+        }
+
+        /* NAVBAR */
+        header {
+            background-color: #0c1b2d;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1e3a5a;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #35d5ff;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #35d5ff;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 8%;
+            gap: 40px;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text h3 {
+            color: #35d5ff;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .hero-text h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 span {
+            color: #35d5ff;
+        }
+
+        .hero-text p {
+            color: #91a6bd;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #35d5ff;
+            color: #07111f;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #4c83ff;
+            transform: translateY(-3px);
+        }
+
+        /* NETWORK CARD */
+        .network-card {
+            background-color: #0c1b2d;
+            border: 1px solid #35d5ff;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 0 25px rgba(53, 213, 255, 0.1);
+        }
+
+        .network-card h2 {
+            color: #35d5ff;
+            margin-bottom: 20px;
+        }
+
+        .network-card p {
+            color: #91a6bd;
+            margin: 10px 0;
+        }
+
+        /* SECTION */
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 35px;
+            color: #35d5ff;
+            margin-bottom: 40px;
+        }
+
+        /* ABOUT */
+        .about {
+            background-color: #0c1b2d;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.8;
+            color: #91a6bd;
+        }
+
+        /* SKILLS */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .skill-box {
+            background-color: #0c1b2d;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #1e3a5a;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .skill-box:hover {
+            border-color: #35d5ff;
+            transform: translateY(-5px);
+        }
+
+        .skill-box h3 {
+            color: #35d5ff;
+            margin-bottom: 15px;
+        }
+
+        .skill-box p {
+            color: #91a6bd;
+            line-height: 1.6;
+        }
+
+        /* PROJECT */
+        .project-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .project-box {
+            background-color: #0c1b2d;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #1e3a5a;
+        }
+
+        .project-box h3 {
+            color: #35d5ff;
+            margin-bottom: 15px;
+        }
+
+        .project-box p {
+            color: #91a6bd;
+            line-height: 1.7;
+        }
+
+        /* CONTACT */
+        .contact {
+            text-align: center;
+            background-color: #0c1b2d;
+        }
+
+        .contact p {
+            color: #91a6bd;
+            margin-bottom: 25px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #91a6bd;
+            border-top: 1px solid #1e3a5a;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 35px;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+
+            .project-container {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="logo">FG.</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+            <h3>Junior Network Engineer</h3>
+
+            <h1>
+                Fharizi<br>
+                <span>Ghatanalya</span>
+            </h1>
+
+            <p>
+                Halo! Saya Fharizi Ghatanalya, siswa kelas 10
+                jurusan Teknik Jaringan Komputer dan Telekomunikasi (TJKT).
+                Saya memiliki minat dalam dunia jaringan komputer,
+                konfigurasi perangkat jaringan, dan teknologi informasi.
+            </p>
+
+            <a href="#projects" class="btn">
+                Lihat Portofolio
+            </a>
+        </div>
+
+        <div class="network-card">
+            <h2>NETWORK SYSTEM</h2>
+            <p>● Router Configuration</p>
+            <p>● Network Infrastructure</p>
+            <p>● IP Addressing</p>
+            <p>● Routing & Switching</p>
+            <p style="color: #35d5ff; margin-top: 20px;">
+                SYSTEM ONLINE
+            </p>
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <p>
+            Saya adalah seorang pelajar kelas 10 jurusan Teknik Jaringan
+            Komputer dan Telekomunikasi. Saya tertarik untuk mempelajari
+            bagaimana jaringan komputer bekerja, membangun infrastruktur
+            jaringan, serta memahami konfigurasi router dan switch.
+            Saya memiliki semangat belajar untuk menjadi seorang
+            Network Engineer yang profesional di masa depan.
+        </p>
+
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill-box">
+                <h3>Network Fundamentals</h3>
+                <p>
+                    Memahami dasar jaringan komputer,
+                    topologi jaringan, dan model OSI.
+                </p>
+            </div>
+
+            <div class="skill-box">
+                <h3>IP Addressing</h3>
+                <p>
+                    Mempelajari IP Address, subnet mask,
+                    gateway, dan subnetting.
+                </p>
+            </div>
+
+            <div class="skill-box">
+                <h3>Routing & Switching</h3>
+                <p>
+                    Mempelajari konfigurasi dasar router
+                    dan switch dalam jaringan.
+                </p>
+            </div>
+
+            <div class="skill-box">
+                <h3>Network Troubleshooting</h3>
+                <p>
+                    Menganalisis masalah koneksi jaringan
+                    menggunakan tools dasar.
+                </p>
+            </div>
+
+            <div class="skill-box">
+                <h3>Cisco Packet Tracer</h3>
+                <p>
+                    Membuat simulasi topologi jaringan
+                    menggunakan Cisco Packet Tracer.
+                </p>
+            </div>
+
+            <div class="skill-box">
+                <h3>IT Support</h3>
+                <p>
+                    Mempelajari instalasi perangkat,
+                    konfigurasi komputer, dan troubleshooting.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="project-container">
+
+            <div class="project-box">
+                <h3>LAN Network Topology</h3>
+                <p>
+                    Membuat simulasi jaringan LAN sederhana
+                    menggunakan Cisco Packet Tracer
+                    dengan beberapa komputer dan switch.
+                </p>
+            </div>
+
+            <div class="project-box">
+                <h3>IP Address Configuration</h3>
+                <p>
+                    Melakukan konfigurasi IP Address pada
+                    perangkat komputer serta melakukan
